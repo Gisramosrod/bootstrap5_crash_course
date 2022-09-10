@@ -50,7 +50,8 @@
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur cupiditate, laboriosam veniam
                         iste deserunt ducimus tempora architecto eveniet eligendi?
                     </p>
-                    <button class="btn btn-primary btn-lg">Start The Enrollment</button>
+                    <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#enroll">Start The
+                        Enrollment</button>
                 </div>
                 <img class="img-flui w-50 d-none d-sm-block" src="img/showcase.svg" alt="">
             </div>
@@ -395,6 +396,47 @@
             </a>
         </div>
     </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="enroll" tabindex="-1" aria-labelledby="enrollLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header flex-column mt-4 ">
+                    <h2 class="modal-title mb-1 text-center" id="enrollLabel">Enrollment</h2>
+                    <p class="lead text-center">Fill out this form and we will get back to you</p>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="first-name" class="col-form-label">
+                                First Name:
+                            </label>
+                            <input type="text" class="form-control" id="first-name" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="last-name" class="col-form-label">Last Name:</label>
+                            <input type="text" class="form-control" id="last-name" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="col-form-label">Email:</label>
+                            <input type="email" class="form-control" id="email" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="col-form-label">Phone:</label>
+                            <input type="tel" class="form-control" id="phone" />
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/elm-pep@1.0.6/dist/elm-pep.js"></script>
